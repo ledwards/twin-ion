@@ -1,0 +1,19 @@
+!!!
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js')
+    script(src='https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js')
+    script(src='/socket.io/socket.io.js')
+    script(src='/javascripts/lib/underscore-min.js')
+    script(src='/javascripts/lib/backbone-min.js')
+    script(src='/javascripts/plugins/socket_draggable.js')
+    script(src='/javascripts/twin_ion.js')
+    script(src='/javascripts/models/card.js')
+    script(src='/javascripts/views/card_view.js')
+    script(src='/javascripts/collections/pile.js')
+    script(src='/javascripts/config.js')
+    script(src='/javascripts/client.js')
+    !=partial('templates/_card')
+  body!= body
