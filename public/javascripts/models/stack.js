@@ -1,14 +1,16 @@
 (function() {
   var namespace = this;
 
-  namespace.Card = Backbone.Model.extend({
+  namespace.Stack = Backbone.Model.extend({
     defaults: {
       position: { top: 0, left: 0 }
     },
 
     initialize: function(){
-      this.uuid = uuid.v4();
-      TwinIon.game.objectRegister[this.uuid] = this;
+      this.cards = new TwinIon.CardCollection;
+      this.cards.bind("add", function(card){
+        console.log(card);
+      });
     },
 
     asJSON: function() {
@@ -18,3 +20,4 @@
     }
   });
 }).apply(TwinIon);
+

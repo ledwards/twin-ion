@@ -39,12 +39,16 @@ console.log("Express server listening on port %d in %s mode", app.address().port
 // Socket events
 
 io.sockets.on('connection', function(socket) {
-  io.sockets.emit('systemMessage', { message: 'A player has joined the game.' });
+  socket.broadcast.emit('systemMessage', { message: 'A player has joined the game.' });
   socket.emit('systemMessage', { message: 'Welcome to the game' });
 
   socket.on('elementMoved', function(data) {
     socket.broadcast.emit('systemMessage', { message: 'Opponent moved a card: ' + data.selector });
     socket.broadcast.emit('updateElementPosition', data.selector, data.position);
+  });
+
+  socket.on('elementAddedToStack', function(data){
+    socket.broadcast.emit('addElementToStack', data);
   });
 });
 

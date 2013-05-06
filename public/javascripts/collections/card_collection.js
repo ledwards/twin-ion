@@ -1,7 +1,7 @@
 (function() {
   var namespace = this;
 
-  namespace.Pile = Backbone.Collection.extend({
+  namespace.CardCollection = Backbone.Collection.extend({
     model: TwinIon.Card
   });
 }).apply(TwinIon);

@@ -1,1 +1,3 @@
-var TwinIon = {};
+var TwinIon = {
+  game: { objectRegister: {}}
+};

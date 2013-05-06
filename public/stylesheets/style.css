@@ -15,11 +15,17 @@ div#board {
 }
 
 .card {
-  height: 80px;
-  width: 57px;
+  height: 85px;
+  width: 62px;
   background: #000000;
 }
 
 .card img {
-  height: 80px;
+  height: 85px;
+}
+
+.stack {
+  height: 85px;
+  width: 62px;
+  border: 1px solid red;
 }
