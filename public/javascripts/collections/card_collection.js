@@ -2,6 +2,11 @@
   var namespace = this;
 
   namespace.CardCollection = Backbone.Collection.extend({
-    model: TwinIon.Card
+    model: TwinIon.Card,
+    backend: 'mybackend',
+
+    initialize: function() {
+        this.bindBackend();
+    }
   });
 }).apply(TwinIon);

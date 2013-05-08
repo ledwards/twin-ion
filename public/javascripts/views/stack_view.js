@@ -7,7 +7,6 @@
 
     render: function() {
       this.el = $(_.template( $("#stack_template").html(), this.model.asJSON() ));
-      this.el.socketStackable({ socket: TwinIon.socket });
       this.container.append(this.el);
       return this;
     }
